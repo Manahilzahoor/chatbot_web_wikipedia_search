@@ -7,11 +7,10 @@ from langchain.agents import create_react_agent,AgentExecutor
 from langchain import hub
 from langchain_community.tools import WikipediaQueryRun
 from langchain_community.utilities import WikipediaAPIWrapper
+from langchain_tavily import TavilySearch
+from dotenv import load_dotenv
 
-os.environ["TAVILY_API_KEY"] = "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"
-
-# if not os.environ.get("TAVILY_API_KEY"):
-    # os.environ["TAVILY_API_KEY"] = getpass.getpass("Tavily API key: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")
+load_dotenv()
 
 from langchain_tavily import TavilySearch
 
